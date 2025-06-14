@@ -257,7 +257,7 @@ if __name__ == "__main__":
                         logging.info(f"Successfully submitted task for Stripe ID {stripe_id}. Infakt Task Ref: {result.get('invoice_task_reference_number')}")
                         success_count += 1
                     else:
-                        logging.error(f"Failed to submit task for Stripe ID {stripe_id}.")
+                        print(f"#####Failed to submit task for Stripe ID {stripe_id}.")
                         failure_count += 1
                 else:
                     logging.info(f"User skipped creating Infakt invoice for Stripe ID: {stripe_id}")
@@ -266,7 +266,7 @@ if __name__ == "__main__":
                     # failure_count += 1 
 
             else:
-                logging.warning(f"Transformation failed or skipped for Stripe ID {stripe_id}. Not sending to Infakt.")
+                logging.warning(f"#####Transformation failed or skipped for Stripe ID {stripe_id}. Not sending to Infakt.")
                 failure_count += 1 # Count transform failures as failures
             
             processed_stripe_ids.add(stripe_id)
