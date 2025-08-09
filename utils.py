@@ -31,7 +31,7 @@ def map_stripe_tax_rate_to_infakt_symbol(percentage: float | None) -> str | None
     """Maps Stripe tax percentage to Infakt tax symbol."""
     # Check what's appcliable in https://api.infakt.pl/api/v3/vat_rates.json
     if percentage is None:
-        return "zw"
+        return "zw"  # applicable for individual clients
 
 
 def map_stripe_payment_method(stripe_invoice: dict) -> str:
