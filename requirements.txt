@@ -1,3 +1,4 @@
 stripe
 requests
-python-dotenv 
+python-dotenv
+reportlab 
